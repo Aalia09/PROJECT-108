@@ -41,40 +41,40 @@ function gotResult(error , results)
         console.error(error);
     } else{
         console.log(results);
-        document.getElementById("result_emotion_name").innerHTML = results[0].label;
-        document.getElementById("result_emotion_name_2").innerHTML = results[1].label;
+        document.getElementById("result_gesture_name").innerHTML = results[0].label;
+        document.getElementById("result_gesture_name_2").innerHTML = results[1].label;
         prediction_1 = results[0].label;
         prediction_2 = results[1].label;
         
 
         if(results[0].label == "Amazing")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128076;";
-        }
-
-        if(results[0].label == "Victory")
-        {
-            document.getElementById("update_emoji").innerHTML = "&#128077;";
+            document.getElementById("update_gesture").innerHTML = "This is looking amazing";
         }
 
         if(results[0].label == "Best")
         {
-            document.getElementById("update_emoji").innerHTML = "&#9996;";
+            document.getElementById("update_gesture").innerHTML = "All the best";
+        }
+
+        if(results[0].label == "Victory")
+        {
+            document.getElementById("update_gesture").innerHTML = "That was a marveious victory";
         }
 
         if(results[1].label == "Amazing")
         {
-            document.getElementById("update_emoji_2").innerHTML = "&#128076;";
-        }
-
-        if(results[1].label == "Victory")
-        {
-            document.getElementById("update_emoji_2").innerHTML = "&#128077;";
+            document.getElementById("update_gesture_2").innerHTML = "This is looking amazing";
         }
 
         if(results[1].label == "Best")
         {
-            document.getElementById("update_emoji_2").innerHTML = "&#9996;";
+            document.getElementById("update_gesture_2").innerHTML = "All the best";
+        }
+
+        if(results[1].label == "Victory")
+        {
+            document.getElementById("update_gesture_2").innerHTML = "That was a marveious victory";
         }
         speak();
     }
