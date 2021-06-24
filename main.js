@@ -84,8 +84,8 @@ function gotResult(error , results)
 function speak()
 {
     var synth = window.speechSynthesis;
-    speakdata_1 = "The first prediction is" + prediction_1;
-    speakdata_2 = "The first prediction is" + prediction_2;
+    speakdata_1 = "The first prediction is" + prediction_1 + "and";
+    speakdata_2 = "The second prediction is" + prediction_2;
     var utterThis = new SpeechSynthesisUtterance(speakdata_1 + speakdata_2);
     synth.speak(utterThis);
 }
